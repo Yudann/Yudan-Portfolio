@@ -27,3 +27,54 @@ body {
   }
 }
   
+
+/* Animasi infinite scroll */
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 20s linear infinite;
+}
+.mask-image {
+  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+}
+.slider {
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+  position: relative;
+}
+
+.slider .list {
+  display: flex;
+  position: absolute;
+  left: 0;
+  animation: autoRun var(--duration, 10s) linear infinite; /* Gunakan variabel --duration */
+}
+
+.slider .list .item {
+  width: var(--width);
+  height: var(--height);
+  flex-shrink: 0;
+  transition: filter 0.5s;
+}
+
+@keyframes autoRun {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-1 * var(--width) * var(--quantity))); }
+}
+
+.slider:hover .list {
+  animation-play-state: paused;
+  filter: grayscale(1);
+}
+
+.slider .list .item:hover {
+  filter: grayscale(0);
+}
