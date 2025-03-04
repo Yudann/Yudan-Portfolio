@@ -23,12 +23,12 @@ export default function ProfileCard() {
         technologies, I love turning ideas into beautiful, functional, and
         efficient web applications. Let`s build something amazing together!
       </p>
-      <div className="flex items-start justify-center gap-3 text-sm mt-5">
-        <div className="flex items-center gap-2 py-2 px-3 border-[2px] border-black-border rounded-[12px]">
+      <div className="flex items-start justify-center gap-3 text-sm mt-5 text-[#b3b3b3] ">
+        <div className="flex items-center gap-2 py-2 px-3 border-[2px] bg-[#262626] border-black-border rounded-[12px]">
           <IoLocationOutline size={20} />
           <span>Tangerang, Indonesia</span>
         </div>
-        <div className="flex items-center gap-2 py-2 px-3 border-[2px] border-black-border rounded-[12px]">
+        <div className="flex items-center gap-2 py-2 px-3 border-[2px] bg-[#262626] border-black-border rounded-[12px]">
           <FaUniversity size={20} />
           <span>Gunadarma University</span>
         </div>
