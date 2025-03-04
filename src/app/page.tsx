@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <Card>
+    <Card className="text-[24px] md:text-4xl font-bold">
       <h1 className="mb-0 md:mb-4 p-3 rounded-lg flex items-center justify-center gap-x-3">
         Wassup, I`m
         <span className="bg-[#9a63f5] p-2 rounded-[12px] flex items-center justify-center">
