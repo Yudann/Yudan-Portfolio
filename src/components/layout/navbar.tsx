@@ -23,8 +23,8 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <div className="w-full flex items-center justify-center">
-      <nav className="fixed bottom-6   px-4 py-2  w-min flex items-center justify-center gap-3 rounded-[24px] bg-[#212121BD] border border-[#FFFFFF1A]">
+    <div className="w-full flex items-center justify-center z-50">
+      <nav className="fixed bottom-4 z-50 px-4 py-2  w-min flex items-center justify-center gap-3 rounded-[24px] bg-black-background border-[2px] border-black-border">
         {navItems.map((item, index) => {
           const isActive = pathname === item.href;
 
@@ -32,15 +32,19 @@ export default function Navbar() {
             <div key={index} className="relative group">
               <Link href={item.href}>
                 <div
-                  className={`w-fit h-full text-white rounded-[16px] p-3 border border-[#FFFFFF1A] cursor-pointer transition-all duration-300 
-                ${isActive ? "bg-blue-400 border-blue-300" : "bg-[#212121BD]"}`}
+                  className={`w-fit h-full text-white rounded-[16px] p-3 border border-black-border cursor-pointer transition-all duration-300 
+                ${
+                  isActive
+                    ? "bg-blue-400 border-blue-300"
+                    : "bg-black-background"
+                }`}
                 >
                   {item.icon}
                 </div>
               </Link>
 
               {isActive && (
-                <div className="absolute left-1/2 -translate-x-1/2 bottom-[-5px] w-[50%] h-[2px] bg-[#FFFFFF1A] rounded-md" />
+                <div className="absolute left-1/2 -translate-x-1/2 bottom-[-5px] w-[50%] h-[2px] bg-black-border rounded-md" />
               )}
 
               <span className="absolute left-1/2 -translate-x-1/2 bottom-[60px] opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-blue-300 bg-transparent border border-white text-sm whitespace-nowrap px-3 py-1 rounded-lg shadow-md">
