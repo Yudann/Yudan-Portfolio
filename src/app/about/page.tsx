@@ -1,24 +1,17 @@
 // pages/index.js
-import Card from "@/components/fragments/card";
-import Image from "next/image";
+import ProfileCard from "@/components/section/about/profileCard";
+import SocialMediaSection from "@/components/section/about/socialMedia";
 import React from "react";
 
 export default function Home() {
   return (
-    <Card>
-      <h1 className="mb-0 md:mb-4 p-3 rounded-lg flex items-center justify-center gap-x-3">
-        Hallo again, this is my
-        <span className="bg-[#9a63f5] p-2 rounded-[12px] flex items-center justify-center">
-          About
-          <Image
-            src="/me-icon.avif"
-            alt="yudan icon"
-            width={100}
-            height={100}
-            className="w-[35px] md:w-[50px] h-[35px] md:h-[50px]"
-          />
-        </span>
-      </h1>
-    </Card>
+    <section className="flex flex-col md:flex-row items-start justify-center gap-5 px-5 lg:px-20 mb-28 h-fit py-5">
+      <div className="relative md:sticky md:top-5">
+        <ProfileCard />
+      </div>
+      <div className="space-y-5 w-full">
+        <SocialMediaSection />
+      </div>
+    </section>
   );
 }
