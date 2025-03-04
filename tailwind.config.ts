@@ -9,6 +9,8 @@ export default {
   theme: {
     extend: {
       colors: {
+        "black-border": "#FFFFFF1A",
+        "black-background": "#212121BD"
       },
     },
   },
