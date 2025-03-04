@@ -39,7 +39,8 @@ const SkillsSection = () => {
   }, [skills.length]);
 
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden text-left">
+      <h1 className="mb-10 text-2xl font-semibold">Skills</h1>
       {/* Container untuk skill */}
       <div className="w-full h-[300px] relative">
         {skills.map((skill, index) => (
