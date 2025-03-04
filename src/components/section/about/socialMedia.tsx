@@ -10,7 +10,7 @@ import {
 export default function SocialMediaSection() {
   return (
     <Card className="text-left">
-      <h1 className="mb-4 text-xl md:text-2xl">Come and say hi!</h1>
+      <h1 className="mb-4 text-2xl md:text-2xl">Come and say hi!</h1>
       <div className="flex flex-col items-center justify-center gap-2 w-full  text-sm font-normal">
         <a
           href="https://www.instagram.com/yudanns_"
