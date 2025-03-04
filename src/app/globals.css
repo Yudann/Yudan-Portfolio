@@ -41,9 +41,12 @@ body {
 .animate-infinite-scroll {
   animation: infinite-scroll 20s linear infinite;
 }
+
+/* TECH STACK STYLING */
 .mask-image {
   mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
 }
+
 .slider {
   width: 100%;
   height: var(--height);
