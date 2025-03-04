@@ -6,11 +6,11 @@ import React from "react";
 
 export default function Home() {
   return (
-    <section className="flex flex-col md:flex-row items-start justify-center gap-5 px-5 lg:px-20 mb-28 h-fit py-5">
-      <div className="relative md:sticky md:top-5">
+    <section className="flex flex-col lg:flex-row items-start justify-between gap-5 px-5 lg:px-20 mb-28 h-fit py-5">
+      <div className="relative lg:sticky lg:top-5 w-full lg:w-1/2">
         <ProfileCard />
       </div>
-      <div className="space-y-5 w-full ">
+      <div className="space-y-5 w-full lg:w-1/2">
         <AboutDetailSection />
         <SocialMediaSection />
       </div>
