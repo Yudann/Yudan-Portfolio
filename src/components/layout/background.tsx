@@ -8,7 +8,9 @@ const Background = ({ children }: { children: React.ReactNode }) => {
     >
       <div className="absolute inset-0 bg-black opacity-70"></div>
 
-      <div className="relative z-10 text-white text-center">{children}</div>
+      <div className="relative z-10 text-white text-center md:mx-32 lg:mx-16 2bxl:mx-64">
+        {children}
+      </div>
     </div>
   );
 };
