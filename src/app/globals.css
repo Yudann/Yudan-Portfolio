@@ -6,3 +6,24 @@
 body {
     background-color: #101010;
 }
+
+/* styles/globals.css */
+/* styles/globals.css */
+@keyframes moveToBottomRight {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+@keyframes moveToTopLeft {
+  0% {
+    transform: translate(50px, 50px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+  
