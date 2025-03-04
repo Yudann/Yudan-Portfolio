@@ -1,5 +1,6 @@
 // pages/index.js
 import AboutDetailSection from "@/components/section/about/aboutDetail";
+import ExperienceSection from "@/components/section/about/experience";
 import ProfileCard from "@/components/section/about/profileCard";
 import SocialMediaSection from "@/components/section/about/socialMedia";
 import React from "react";
@@ -12,6 +13,7 @@ export default function Home() {
       </div>
       <div className="space-y-5 w-full lg:w-1/2">
         <AboutDetailSection />
+        <ExperienceSection />
         <SocialMediaSection />
       </div>
     </section>
