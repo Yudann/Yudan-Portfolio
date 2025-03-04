@@ -1,4 +1,5 @@
 // pages/index.js
+import AboutDetailSection from "@/components/section/about/aboutDetail";
 import ProfileCard from "@/components/section/about/profileCard";
 import SocialMediaSection from "@/components/section/about/socialMedia";
 import React from "react";
@@ -9,7 +10,8 @@ export default function Home() {
       <div className="relative md:sticky md:top-5">
         <ProfileCard />
       </div>
-      <div className="space-y-5 w-full">
+      <div className="space-y-5 w-full ">
+        <AboutDetailSection />
         <SocialMediaSection />
       </div>
     </section>
