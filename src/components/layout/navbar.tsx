@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <div className="w-full flex items-center justify-center z-50">
-      <nav className="fixed bottom-4 z-50 px-4 py-2  w-min flex items-center justify-center gap-3 rounded-[24px] bg-black-background border-[2px] border-black-border">
+      <nav className="fixed bottom-4 z-50 px-4 py-2 backdrop-blur-lg w-min flex items-center justify-center gap-3 rounded-[24px] bg-black-background border-[2px] border-black-border">
         {navItems.map((item, index) => {
           const isActive = pathname === item.href;
 
@@ -47,7 +47,7 @@ export default function Navbar() {
                 <div className="absolute left-1/2 -translate-x-1/2 bottom-[-5px] w-[50%] h-[2px] bg-black-border rounded-md" />
               )}
 
-              <span className="absolute left-1/2 -translate-x-1/2 bottom-[60px] opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-blue-300 bg-transparent border border-white text-sm whitespace-nowrap px-3 py-1 rounded-lg shadow-md">
+              <span className="absolute left-1/2 -translate-x-1/2 bottom-[65px] backdrop-blur-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-blue-300  bg-black-background border-[2px] border-black-border text-sm whitespace-nowrap px-3 py-1 rounded-lg shadow-md">
                 {item.label}
               </span>
             </div>
