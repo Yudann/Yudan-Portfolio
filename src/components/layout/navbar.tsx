@@ -35,7 +35,7 @@ export default function Navbar() {
                   className={`w-fit h-full text-white rounded-[16px] p-3 border border-black-border cursor-pointer transition-all duration-300 
                 ${
                   isActive
-                    ? "bg-blue-400 border-blue-300"
+                    ? "bg-blue-background border-blue-200"
                     : "bg-black-background"
                 }`}
                 >
@@ -47,7 +47,7 @@ export default function Navbar() {
                 <div className="absolute left-1/2 -translate-x-1/2 bottom-[-5px] w-[50%] h-[2px] bg-black-border rounded-md" />
               )}
 
-              <span className="absolute left-1/2 -translate-x-1/2 bottom-[65px] backdrop-blur-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-blue-300  bg-black-background border-[2px] border-black-border text-sm whitespace-nowrap px-3 py-1 rounded-lg shadow-md">
+              <span className="absolute left-1/2 -translate-x-1/2 bottom-[65px] backdrop-blur-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-blue-background font-semibold bg-black-background border-[2px] border-black-border text-sm whitespace-nowrap px-3 py-1 rounded-lg shadow-md">
                 {item.label}
               </span>
             </div>
