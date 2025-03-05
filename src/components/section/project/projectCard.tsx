@@ -1,4 +1,4 @@
-import { Project } from "@/app/projects/projectsData/projectData";
+import { Project } from "@/types/projectCard.type";
 import Image from "next/image";
 
 interface ProjectCardProps {
