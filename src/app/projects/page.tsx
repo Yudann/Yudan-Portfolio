@@ -42,7 +42,7 @@ const projects: Project[] = [
 
 export default function ProjectsPage() {
   return (
-    <div className="p-5 mb-28 mx-0 lg:mx-0 md:mx-0 xl:mx-64">
+    <div className="p-5 mb-28 mx-0 lg:mx-0 md:mx-0 xl:mx-32">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <Card
@@ -52,7 +52,7 @@ export default function ProjectsPage() {
             <ProjectCard project={project} />
           </Card>
         ))}
-        <Card className="text-left">
+        <Card className="text-left md:hover:rotate-2 transition-all duration-300">
           <div className="flex mb-5 items-end justify-center bg-gradient-to-t from-purple-background via-purple-background to-[#c39eff] rounded-[12px] aspect-square overflow-hidden">
             <video
               src="/projects/appleWeb.mp4"
