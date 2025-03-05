@@ -14,8 +14,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             key={index}
             src={image}
             alt={`${project.title} image ${index + 1}`}
-            width={600}
-            height={600}
+            width={1000}
+            height={1000}
             className="w-full"
           />
         ))}
