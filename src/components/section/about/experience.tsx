@@ -12,7 +12,7 @@ export default function ExperienceSection() {
         <Link
           href="https://demo.riors.com/"
           target="_blank"
-          className="flex items-center gap-2 py-1 px-3 border-[2px] bg-[#262626] border-black-border rounded-[12px]"
+          className="flex items-center justify-center gap-2 py-1 px-3 border-[2px] bg-[#262626] font-semibold border-black-border rounded-[12px] hover:bg-purple-background transition-all duration-200"
         >
           <span>RIORS</span>
           <GrFormNextLink size={25} className="-rotate-45" />
@@ -33,7 +33,7 @@ export default function ExperienceSection() {
         <Link
           href="/project"
           target="_blank"
-          className="flex items-center gap-2 py-1 px-3 border-[2px] bg-[#262626] border-black-border rounded-[12px]"
+          className="flex items-center justify-center font-semibold gap-2 py-1 px-3 border-[2px] bg-[#262626] border-black-border rounded-[12px] hover:bg-green-background transition-all duration-200"
         >
           <span>Joki Website</span>
           <GrFormNextLink size={25} className="-rotate-45" />
