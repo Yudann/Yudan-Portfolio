@@ -6,13 +6,13 @@ import { IoLocationOutline } from "react-icons/io5";
 export default function ProfileCard() {
   return (
     <Card className="items-start text-left">
-      <div className="border rounded-full overflow-hidden my-5 md:my-20 ">
+      <div className="flex mb-5 items-center justify-center  aspect-square">
         <Image
-          src="/yudan_1.png"
-          alt="yudan icon"
-          width={1000}
-          height={1000}
-          className="w-[200px] h-[200px] md:w-[200px] md:h-[200px]"
+          src="/yudan-about.jpeg"
+          alt="yudan about"
+          width={2000}
+          height={2000}
+          className="w-full rounded-[12px]"
         />
       </div>
       <h1 className="mb-4 text-2xl font-bold">Hey again 👋</h1>
