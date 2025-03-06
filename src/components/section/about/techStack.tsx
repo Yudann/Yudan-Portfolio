@@ -1,4 +1,3 @@
-// components/TechStackSlider.js
 "use client";
 
 import Card from "@/components/fragments/card";
@@ -78,6 +77,9 @@ export default function TechStackSlider() {
   const width = 80;
   const height = 80;
 
+  // Simpan index item yang sedang di-hover
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   return (
     <Card className="text-left p-6">
       <h1 className="mb-4 text-2xl font-semibold">Tech Stack</h1>
@@ -93,47 +95,45 @@ export default function TechStackSlider() {
         }
       >
         <div className="list">
-          {techIcons.map((tech, index) => {
-            const [hovered, setHovered] = useState(false);
-            return (
+          {techIcons.map((tech, index) => (
+            <div
+              key={index}
+              className="item"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
               <div
-                key={index}
-                className="item"
-                onMouseEnter={() => setHovered(true)}
-                onMouseLeave={() => setHovered(false)}
+                className="flex-none w-16 h-16 mx-4 rounded-[12px] cursor-pointer border border-black-border shadow-lg flex items-center justify-center text-white transition-all duration-300"
+                style={{
+                  backgroundColor:
+                    hoveredIndex === index ? tech.hover : "transparent",
+                }}
               >
-                <div
-                  className="flex-none w-16 h-16 mx-4 rounded-[12px] cursor-pointer border border-black-border shadow-lg flex items-center justify-center text-white transition-all duration-300"
-                  style={{
-                    backgroundColor: hovered ? tech.hover : "transparent",
-                  }}
-                >
-                  {tech.icon}
-                </div>
+                {tech.icon}
               </div>
-            );
-          })}
+            </div>
+          ))}
           {/* Duplikat item untuk efek infinite looping */}
-          {techIcons.map((tech, index) => {
-            const [hovered, setHovered] = useState(false);
-            return (
+          {techIcons.map((tech, index) => (
+            <div
+              key={`duplicate-${index}`}
+              className="item"
+              onMouseEnter={() => setHoveredIndex(index + quantity)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
               <div
-                key={`duplicate-${index}`}
-                className="item"
-                onMouseEnter={() => setHovered(true)}
-                onMouseLeave={() => setHovered(false)}
+                className="flex-none w-16 h-16 mx-4 rounded-[12px] cursor-pointer border border-black-border shadow-lg flex items-center justify-center text-white transition-all duration-300"
+                style={{
+                  backgroundColor:
+                    hoveredIndex === index + quantity
+                      ? tech.hover
+                      : "transparent",
+                }}
               >
-                <div
-                  className="flex-none w-16 h-16 mx-4 rounded-[12px] cursor-pointer border border-black-border shadow-lg flex items-center justify-center text-white transition-all duration-300"
-                  style={{
-                    backgroundColor: hovered ? tech.hover : "transparent",
-                  }}
-                >
-                  {tech.icon}
-                </div>
+                {tech.icon}
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </Card>
