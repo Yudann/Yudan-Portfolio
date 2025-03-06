@@ -7,6 +7,10 @@ body {
     background-color: #101010;
 }
 
+p {
+  color: #b3b3b3;
+}
+
 /* styles/globals.css */
 /* styles/globals.css */
 @keyframes moveToBottomRight {
