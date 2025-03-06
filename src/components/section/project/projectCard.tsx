@@ -1,5 +1,6 @@
 import { Project } from "@/types/projectCard.type";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProjectCardProps {
   project: Project;
@@ -7,11 +8,11 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="items-start text-left">
+    <Link href={project.slug} className="items-start text-left">
       <div className="flex mb-5 items-center justify-center p-8 bg-gradient-to-b from-blue-background via-blue-background to-[#a3d5ff] rounded-[12px] aspect-square">
         {project.images.map((image, index) => (
           <Image
-            key={index}
+            key={index} 
             src={image}
             alt={`${project.title} image ${index + 1}`}
             width={1000}
@@ -33,6 +34,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </div>
         ))}
       </div>
-    </div>
+    </Link>
   );
 }
