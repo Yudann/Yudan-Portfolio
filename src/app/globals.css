@@ -79,7 +79,6 @@ p {
 
 .slider:hover .list {
   animation-play-state: paused;
-  filter: grayscale(1);
 }
 
 .slider .list .item:hover {
