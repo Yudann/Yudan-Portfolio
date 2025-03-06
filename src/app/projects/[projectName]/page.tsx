@@ -3,7 +3,10 @@
 import Card from "@/components/fragments/card";
 import { useParams } from "next/navigation";
 import { projects } from "../projectsData";
+import { IoMdClose } from "react-icons/io";
+
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProjectDetailPage() {
   const { projectName } = useParams() as { projectName: string };
@@ -22,9 +25,15 @@ export default function ProjectDetailPage() {
   }
 
   return (
-    <div className="flex flex-col gap-2 lg:w-[600px] w-fit m-5 mb-28">
-      <Card className="text-left">
-        <div className="flex mb-5 items-center justify-center p-8 bg-gradient-to-b from-blue-background via-blue-background to-[#a3d5ff] rounded-[12px] aspect-square">
+    <div className="flex flex-col gap-2 text-left lg:w-[900px] w-fit m-5 my-28">
+      <Link
+        href="/projects"
+        className="fixed backdrop-blur-md top-8 p-3 bg-black-background rounded-[12px] border-[2px] border-black-border w-fit self-center cursor-pointer hover:top-7 transition-all duration-200"
+      >
+        <IoMdClose size={25} />
+      </Link>
+      <Card className="text-left p-0 mb-12">
+        <div className="flex p-10 items-center justify-center bg-gradient-to-b from-blue-background via-blue-background to-[#a3d5ff] rounded-[12px] aspect-[16/9]">
           <Image
             src={projectsData.images[0]}
             alt={`${projectsData.title} image `}
@@ -33,9 +42,10 @@ export default function ProjectDetailPage() {
             className="w-full"
           />
         </div>
-        <h1 className="text-xl font-bold mb">{projectsData.title}</h1>
-        <p className="my-3">{projectsData.description}</p>
-        <div className="grid grid-rows-2 grid-cols-2 lg:grid-rows-1 lg:grid-cols-3 items-start justify-start gap-3 text-sm mt-5 text-[#b3b3b3]">
+      </Card>
+      <div className="block space-y-3 mb-5 mx-0 lg:mx-28">
+        <h1 className="text-[24px]  font-semibold">{projectsData.title}</h1>
+        <div className="grid grid-rows-2 grid-cols-2 lg:grid-rows-1 lg:grid-cols-3 items-start justify-start gap-3 text-sm  text-[#b3b3b3]">
           {projectsData.tags.map((tag, index) => (
             <div
               key={index}
@@ -46,34 +56,45 @@ export default function ProjectDetailPage() {
             </div>
           ))}
         </div>
-      </Card>
-      <p className="text-left p-4">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
-        praesentium repellat nam reprehenderit ad? Quo amet ipsa atque quidem
-        sit tenetur possimus vitae asperiores nobis necessitatibus eum qui
-        placeat animi, tempore eius id fugit facilis accusamus reiciendis
-        voluptates eveniet error. Lorem ipsum dolor sit amet consectetur <br />
-        adipisicing elit. Debitis cumque quae iure quo commodi voluptatibus
-        libero consequuntur quisquam atque! Ratione est laudantium officia
-        deserunt porro ut amet odit adipisci deleniti eveniet magni sunt at
-        veritatis provident inventore hic commodi consequuntur possimus et,
-        perspiciatis culpa fuga dolore quia sequi? Distinctio eveniet odio,
-        labore quia numquam ea possimus laudantium earum consequuntur maxime.{" "}
-        <br />
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
-        praesentium repellat nam reprehenderit ad? Quo amet ipsa atque quidem
-        sit tenetur possimus vitae asperiores nobis necessitatibus eum qui
-        placeat animi, tempore eius id fugit facilis accusamus reiciendis
-        voluptates eveniet error. Lorem ipsum dolor sit amet consectetur <br />
-        adipisicing elit. Debitis cumque quae iure quo commodi voluptatibus
-        libero consequuntur quisquam atque! Ratione est laudantium officia
-        deserunt porro ut amet odit adipisci deleniti eveniet magni sunt at
-        veritatis provident inventore hic commodi consequuntur possimus et,
-        perspiciatis culpa fuga dolore quia sequi? Distinctio eveniet odio,
-        labore quia numquam ea possimus laudantium earum consequuntur maxime.
-      </p>
-      <Card className="text-left">
-        <div className="flex w-full mb-5 items-center justify-center p-8 bg-gradient-to-b from-blue-background via-blue-background to-[#a3d5ff] rounded-[12px] aspect-square">
+      </div>
+      <div className="block space-y-3 mb-5 mx-0 lg:mx-28">
+        <h1 className="text-[24px]  font-semibold ">Overview</h1>
+        <p className="text-[#b3b3b3] text-base">
+          adipisicing elit. Debitis cumque quae iure quo commodi voluptatibus
+          libero consequuntur quisquam atque! Ratione est laudantium officia
+          deserunt porro ut amet odit adipisci deleniti eveniet magni sunt at
+          veritatis provident inventore hic commodi consequuntur possimus et,
+          perspiciatis culpa fuga dolore quia sequi? Distinctio eveniet odio,
+          labore quia numquam ea possimus laudantium earum consequuntur maxime.{" "}
+          <br />
+        </p>
+      </div>
+      <div className="block space-y-3 mb-5 mx-0 lg:mx-28">
+        <h1 className="text-[24px]  font-semibold ">Solution</h1>
+        <p className="text-[#b3b3b3] text-base">
+          adipisicing elit. Debitis cumque quae iure quo commodi voluptatibus
+          libero consequuntur quisquam atque! Ratione est laudantium officia
+          deserunt porro ut amet odit adipisci deleniti eveniet magni sunt at
+          veritatis provident inventore hic commodi consequuntur possimus et,
+          perspiciatis culpa fuga dolore quia sequi? Distinctio eveniet odio,
+          labore quia numquam ea possimus laudantium earum consequuntur maxime.{" "}
+          <br />
+        </p>
+      </div>
+      <div className="block space-y-3 mb-5 mx-0 lg:mx-28">
+        <h1 className="text-[24px]  font-semibold ">Result</h1>
+        <p className="text-[#b3b3b3] text-base">
+          adipisicing elit. Debitis cumque quae iure quo commodi voluptatibus
+          libero consequuntur quisquam atque! Ratione est laudantium officia
+          deserunt porro ut amet odit adipisci deleniti eveniet magni sunt at
+          veritatis provident inventore hic commodi consequuntur possimus et,
+          perspiciatis culpa fuga dolore quia sequi? Distinctio eveniet odio,
+          labore quia numquam ea possimus laudantium earum consequuntur maxime.{" "}
+          <br />
+        </p>
+      </div>
+      <Card className="mt-10">
+        <div className="flex w-full mb-5 items-center justify-center p-8 bg-gradient-to-b from-blue-background via-blue-background to-[#a3d5ff] rounded-[12px] aspect-[16/9]">
           <Image
             src={projectsData.images[0]}
             alt={projectsData.title}
@@ -83,7 +104,7 @@ export default function ProjectDetailPage() {
           />
         </div>
         <h1 className="text-2xl font-bold">{projectsData.title}</h1>
-        <p>{projectsData.description}</p>
+        <p className="text-[#b3b3b3] text-base">{projectsData.description}</p>
       </Card>
     </div>
   );
