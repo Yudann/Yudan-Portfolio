@@ -9,7 +9,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <section className="mx-24 flex flex-col lg:flex-row items-start justify-between gap-5 px-5 lg:px-20 mb-28 lg:mb-[5.5rem] h-fit py-5">
+    <section className="lg:mx-24 flex flex-col lg:flex-row items-start justify-between gap-5 px-5 lg:px-20 mb-28 lg:mb-[5.5rem] h-fit py-5">
       <div className="relative lg:sticky lg:top-5 w-full lg:w-1/2">
         <ProfileCard />
       </div>
