@@ -12,7 +12,7 @@ export default function ProfileCard() {
           alt="yudan about"
           width={2000}
           height={2000}
-          className="w-full rounded-[12px]"
+          className="w-full rounded-[12px] lg:grayscale hover:grayscale-0 transition-all duration-200"
         />
       </div>
       <h1 className="mb-4 text-2xl font-bold">Hey again 👋</h1>
