@@ -17,11 +17,12 @@ export default function ProfileCard() {
       </div>
       <h1 className="mb-4 text-2xl font-bold">Hey again 👋</h1>
       <p className="text-base font-normal">
-        I`m Yudan, a web developer passionate about crafting digital experiences
-        that are smooth, engaging, and make life just a little bit easier.
-        Currently exploring the depths of Next.js, Tailwind CSS, and modern web
-        technologies, I love turning ideas into beautiful, functional, and
-        efficient web applications. Let`s build something amazing together!
+        I`m Yudan, a Front-End Developer who thrives on building smooth,
+        engaging, and efficient digital experiences. With a strong focus on
+        Next.js, Tailwind CSS, and React Native, I love transforming ideas into
+        intuitive and high-performance applications. Currently, I`m diving
+        deeper into modern web technologies while constantly refining my craft.
+        Let`s turn great ideas into reality together!
       </p>
       <div className="flex items-start justify-center gap-3 text-sm mt-5 text-[#b3b3b3] ">
         <div className="flex items-center gap-2 py-2 px-3 border-[2px] bg-[#262626] border-black-border rounded-[12px]">
