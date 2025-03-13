@@ -33,7 +33,9 @@ export default function ProjectDetailPage() {
         <IoMdClose size={25} />
       </Link>
       <Card className="text-left p-0 mb-12">
-        <div className="flex p-10 items-center justify-center bg-gradient-to-b from-blue-background via-blue-background to-[#a3d5ff] rounded-[12px] aspect-[16/9]">
+        <div
+          className={`sflex p-10 items-center justify-center bg-gradient-to-b ${projectsData.bgGradient} rounded-[12px] aspect-[16/9]`}
+        >
           <Image
             src={projectsData.images[0]}
             alt={`${projectsData.title} image `}
@@ -44,8 +46,8 @@ export default function ProjectDetailPage() {
         </div>
       </Card>
       <div className="block space-y-3 mb-5 mx-0 lg:mx-28">
-        <h1 className="text-[24px]  font-semibold">{projectsData.title}</h1>
-        <div className="grid grid-rows-2 grid-cols-2 lg:grid-rows-1 lg:grid-cols-3 items-start justify-start gap-3 text-sm  text-[#b3b3b3]">
+        <h1 className="text-[24px] font-semibold">{projectsData.title}</h1>
+        <div className="grid grid-rows-2 grid-cols-2 lg:grid-rows-1 lg:grid-cols-3 items-start justify-start gap-3 text-sm text-[#b3b3b3]">
           {projectsData.tags.map((tag, index) => (
             <div
               key={index}
@@ -57,44 +59,29 @@ export default function ProjectDetailPage() {
           ))}
         </div>
       </div>
+
+      {/* Overview */}
       <div className="block space-y-3 mb-5 mx-0 lg:mx-28">
-        <h1 className="text-[24px]  font-semibold ">Overview</h1>
-        <p className="text-[#b3b3b3] text-base">
-          adipisicing elit. Debitis cumque quae iure quo commodi voluptatibus
-          libero consequuntur quisquam atque! Ratione est laudantium officia
-          deserunt porro ut amet odit adipisci deleniti eveniet magni sunt at
-          veritatis provident inventore hic commodi consequuntur possimus et,
-          perspiciatis culpa fuga dolore quia sequi? Distinctio eveniet odio,
-          labore quia numquam ea possimus laudantium earum consequuntur maxime.{" "}
-          <br />
-        </p>
+        <h1 className="text-[24px] font-semibold">Overview</h1>
+        <p className="text-[#b3b3b3] text-base">{projectsData.overview}</p>
       </div>
+
+      {/* Solution */}
       <div className="block space-y-3 mb-5 mx-0 lg:mx-28">
-        <h1 className="text-[24px]  font-semibold ">Solution</h1>
-        <p className="text-[#b3b3b3] text-base">
-          adipisicing elit. Debitis cumque quae iure quo commodi voluptatibus
-          libero consequuntur quisquam atque! Ratione est laudantium officia
-          deserunt porro ut amet odit adipisci deleniti eveniet magni sunt at
-          veritatis provident inventore hic commodi consequuntur possimus et,
-          perspiciatis culpa fuga dolore quia sequi? Distinctio eveniet odio,
-          labore quia numquam ea possimus laudantium earum consequuntur maxime.{" "}
-          <br />
-        </p>
+        <h1 className="text-[24px] font-semibold">Solution</h1>
+        <p className="text-[#b3b3b3] text-base">{projectsData.solution}</p>
       </div>
+
+      {/* Result */}
       <div className="block space-y-3 mb-5 mx-0 lg:mx-28">
-        <h1 className="text-[24px]  font-semibold ">Result</h1>
-        <p className="text-[#b3b3b3] text-base">
-          adipisicing elit. Debitis cumque quae iure quo commodi voluptatibus
-          libero consequuntur quisquam atque! Ratione est laudantium officia
-          deserunt porro ut amet odit adipisci deleniti eveniet magni sunt at
-          veritatis provident inventore hic commodi consequuntur possimus et,
-          perspiciatis culpa fuga dolore quia sequi? Distinctio eveniet odio,
-          labore quia numquam ea possimus laudantium earum consequuntur maxime.{" "}
-          <br />
-        </p>
+        <h1 className="text-[24px] font-semibold">Result</h1>
+        <p className="text-[#b3b3b3] text-base">{projectsData.result}</p>
       </div>
+
       <Card className="mt-10">
-        <div className="flex w-full mb-5 items-center justify-center p-8 bg-gradient-to-b from-blue-background via-blue-background to-[#a3d5ff] rounded-[12px] aspect-[16/9]">
+        <div
+          className={`flex w-full mb-5 items-center justify-center p-8 bg-gradient-to-b ${projectsData.bgGradient} rounded-[12px] aspect-[16/9]`}
+        >
           <Image
             src={projectsData.images[0]}
             alt={projectsData.title}

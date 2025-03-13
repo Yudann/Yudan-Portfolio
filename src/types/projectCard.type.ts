@@ -8,4 +8,8 @@ export interface Project {
   images: string[];
   slug: string;
   tags: { icon: ReactElement; label: string }[];
+  overview: string;
+  solution: string;
+  result: string;
+  bgGradient: string;
 }
