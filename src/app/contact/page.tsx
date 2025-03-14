@@ -1,11 +1,19 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Card from "@/components/fragments/card";
 import emailjs from "@emailjs/browser";
-import { useSearchParams } from "next/navigation"; // Import useSearchParams
+import { useSearchParams } from "next/navigation";
 
 export default function ContactForm() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ContactFormContent />
+    </Suspense>
+  );
+}
+
+function ContactFormContent() {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -13,9 +21,8 @@ export default function ContactForm() {
   });
 
   const [status, setStatus] = useState("");
-  const searchParams = useSearchParams(); // Inisialisasi useSearchParams
+  const searchParams = useSearchParams(); 
 
-  // Ambil pesan dari query parameter
   useEffect(() => {
     const message = searchParams.get("message");
     if (message) {
