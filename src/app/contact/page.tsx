@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "@/components/fragments/card";
 import emailjs from "@emailjs/browser";
+import { useSearchParams } from "next/navigation"; // Import useSearchParams
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -12,8 +13,25 @@ export default function ContactForm() {
   });
 
   const [status, setStatus] = useState("");
+  const searchParams = useSearchParams(); // Inisialisasi useSearchParams
+
+  // Ambil pesan dari query parameter
+  useEffect(() => {
+    const message = searchParams.get("message");
+    if (message) {
+      setForm((prevForm) => ({
+        ...prevForm,
+        message: decodeURIComponent(message),
+      }));
+    }
+  }, [searchParams]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+  const handleChange2 = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -66,12 +84,11 @@ export default function ContactForm() {
 
         <div className="flex flex-col gap-2">
           <label className="text-base lg:text-xl font-medium">Message</label>
-          <input
-            type="text"
+          <textarea
             name="message"
             value={form.message}
-            onChange={handleChange}
-            className="w-full p-2 bg-transparent focus:bg-[#262626] border-b border-black-border text-white placeholder-gray-400"
+            onChange={handleChange2}
+            className="w-full p-2 bg-transparent focus:bg-[#262626] border-b border-black-border text-white placeholder-gray-400 resize-y min-h-[100px]"
             placeholder="YOUR MESSAGE"
             required
           />
