@@ -15,7 +15,7 @@ const navItems = [
     icon: <PiPaintBrushDuotone size={25} />,
     label: "Projects",
   },
-  { href: "/tech-stack", icon: <FaCode size={25} />, label: "Tech Stack" },
+  { href: "/services", icon: <FaCode size={25} />, label: "Services" },
   { href: "/contact", icon: <CiMail size={25} />, label: "Contact" },
 ];
 
