@@ -17,6 +17,9 @@ export default function Home() {
     { id: 6, img: "/projects/tracker-str-2.png", x: "-50%", y: "50%" },
   ];
 
+
+// ! TAMBAHKAN EFFEK BACKGROUND GONTA GNATI WARNA BIAR MENARIK
+
   return (
     <div className="relative flex items-center justify-center min-h-screen w-screen">
       <motion.div
