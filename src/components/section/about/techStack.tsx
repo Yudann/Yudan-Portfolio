@@ -2,6 +2,7 @@
 
 import Card from "@/components/fragments/card";
 import React, { useState } from "react";
+import { DiMysql } from "react-icons/di";
 import {
   SiReact,
   SiHtml5,
@@ -49,6 +50,7 @@ export default function TechStackSlider() {
       name: "React Native",
       hover: "#61DAFB",
     },
+    { icon: <DiMysql className="w-8 h-8" />, name: "MySQL", hover: "#3776AB" },
     {
       icon: <SiJavascript className="w-8 h-8" />,
       name: "JavaScript",
