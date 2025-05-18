@@ -4,7 +4,7 @@ import {
   FaLinkedin,
   FaYoutube,
   FaEnvelope,
-  FaXTwitter,
+  // FaXTwitter,
 } from "react-icons/fa6";
 
 export default function SocialMediaSection() {
@@ -42,14 +42,14 @@ export default function SocialMediaSection() {
         >
           <FaEnvelope size={20} /> Email
         </a>
-        <a
+        {/* <a
           href="https://twitter.com/username"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full flex items-center justify-center py-3 border border-black-border bg-[#262626] rounded-lg gap-2 text-white transition-all duration-300 hover:bg-[#000000]"
         >
           <FaXTwitter size={20} /> (Twitter)
-        </a>
+        </a> */}
       </div>
     </Card>
   );
