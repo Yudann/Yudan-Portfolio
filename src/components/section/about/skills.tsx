@@ -5,26 +5,21 @@ import { useEffect, useState } from "react";
 import { FaMousePointer } from "react-icons/fa"; // Icon untuk cursor
 
 const SkillsSection = () => {
-  // Daftar skill dengan posisi yang sudah ditentukan
   const skills = [
-    { name: "UX DESIGN", id: "ux-design", top: 20, left: 50 },
-    { name: "BRANDING", id: "branding", top: 150, left: 250 },
-    { name: "WEB DESIGN", id: "web-design", top: 50, left: 550 },
-    { name: "FRAMER", id: "framer", top: 150, left: 450 },
-    { name: "STRATEGY", id: "strategy", top: 200, left: 150 },
-    { name: "USER RESEARCH", id: "user-research", top: 10, left: 350 },
+    { name: "UI/UX DESIGN", id: "ux-design", top: 20, left: 50 },
+    { name: "FRONT END", id: "fronted-web-dev", top: 50, left: 550 },
+    { name: "WEB DEVELOPER", id: "web-developer", top: 150, left: 450 },
+    { name: "MOBILE DEVELOPER", id: "mobile-developer", top: 200, left: 150 },
+    { name: "DATA STRUCTURE", id: "data-structure", top: 10, left: 350 },
   ];
 
-  // State untuk mengontrol animasi
   const [activeSkill, setActiveSkill] = useState(0);
   const [animationPhase, setAnimationPhase] = useState("phase1"); // phase1 atau phase2
 
-  // Fungsi untuk menggerakkan skill satu per satu
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSkill((prev) => {
         if (prev === skills.length - 1) {
-          // Jika semua skill sudah selesai, ganti fase animasi
           setAnimationPhase((phase) =>
             phase === "phase1" ? "phase2" : "phase1"
           );
