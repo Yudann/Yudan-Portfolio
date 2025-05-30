@@ -49,25 +49,28 @@ export default function ExperienceSection() {
           dolor sit amet consectetur adipisicing elit. Nisi, corporis.
         </p>
       </div>
-      {/* JOKI WEBSITE */}
+      {/* Yudan Course */}
       <div className="flex flex-col items-start justify-center w-full pt-4 border-t border-black-border">
         <Link
-          href="/projects"
-          // target="_blank"
+          href="https://yudan-course.vercel.app/"
+          target="_blank"
           className="flex items-center justify-center font-semibold gap-2 py-1 px-3 border-[2px] bg-[#262626] border-black-border rounded-[12px] hover:bg-green-background transition-all duration-200"
         >
-          <span>ByDemy Website</span>
+          <span>Yudan Course Website</span>
           <GrFormNextLink size={25} className="-rotate-45" />
         </Link>
         <h1 className="font-semibold my-2">
           Full stack Web Developer• 2025 - Current
         </h1>
         <p className="mb-4">
-          Providing custom website development services for students and
-          professionals, specializing in academic projects, final assignments
-          (Penelitian Ilmiah), and other web-related tasks. I ensure that every
-          project is well-structured, optimized, and tailored to the client`s
-          needs, using Next.js, React.js, and modern web technologies.
+          Yudan Course is an educational web platform I built to support
+          students and aspiring developers in learning modern web development.
+          This full-stack project showcases my ability to design, develop, and
+          deploy scalable web applications using technologies such as Next.js,
+          React.js, TypeScript, Tailwind CSS, and more. Beyond the technical
+          implementation, I focused on creating a clean user experience,
+          reusable components, and efficient API handling with best practices in
+          mind.
         </p>
       </div>
 
